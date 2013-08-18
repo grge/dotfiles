@@ -1,10 +1,16 @@
 " Standard options and settings
 " --------------------------------
 
+syntax enable
+filetype plugin indent on
+set autoindent
 set nocompatible
 set t_Co=256
 set tabstop=4
+set shiftwidth=4
+set expandtab
 set smarttab
+set hlsearch
 set number
 
 " Custom mappings
@@ -19,16 +25,13 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 inoremap jk <esc>
 
-
 " Vundle (plugin manager) set up
 " --------------------------------
 
-filetype plugin indent on
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-syntax enable
 
 " Other plugins
 " --------------------------------
@@ -36,14 +39,8 @@ syntax enable
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'mhinz/vim-startify'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ervandew/supertab' 
-Bundle 'scrooloose/nerdtree' 
-Bundle 'jistr/vim-nerdtree-tabs'
-
-Bundle 'vim-scripts/ZoomWin'
-" <c-w>o zooms in/out on current window
 
 Bundle 'mattn/zencoding-vim' 
 " <c-y>, 
@@ -56,7 +53,6 @@ Bundle 'tpope/vim-commentary'
 
 Bundle 'tpope/vim-speeddating' 
 " <c-A> and <c-X> : 1997-08-29
-
 
 " Colorscheme plugins
 " --------------------------------
