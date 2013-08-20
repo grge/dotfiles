@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 DISABLE_LS_COLORS="true"
-alias tmux="TERM=screen-256color bce tmux"
+alias tmux="TERM=screen-256color-bce tmux"
 
 plugins=(git)
 plugins=(python)
