@@ -36,11 +36,8 @@ syntax enable
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'mhinz/vim-startify'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ervandew/supertab' 
-Bundle 'scrooloose/nerdtree' 
-Bundle 'jistr/vim-nerdtree-tabs'
 
 Bundle 'vim-scripts/ZoomWin'
 " <c-w>o zooms in/out on current window
