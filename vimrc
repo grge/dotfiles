@@ -1,8 +1,6 @@
 " Standard options and settings
 " --------------------------------
 
-syntax enable
-filetype plugin indent on
 set autoindent
 set nocompatible
 set t_Co=256
@@ -33,35 +31,39 @@ inoremap jk <esc>
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Bundle 'gmarik/vundle'
+
+Plugin 'gmarik/Vundle.vim'
 
 " Other plugins
 " --------------------------------
 
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'ervandew/supertab' 
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'ervandew/supertab' 
 
-Bundle 'mattn/zencoding-vim' 
-" <c-y>, 
 
-Bundle 'kien/ctrlp.vim' 
+Plugin 'kien/ctrlp.vim' 
 " <c-p>
 
-Bundle 'tpope/vim-commentary' 
+Plugin 'tpope/vim-commentary' 
 " gc<MOTION> 
 
-Bundle 'tpope/vim-speeddating' 
+Plugin 'tpope/vim-speeddating' 
 " <c-A> and <c-X> : 1997-08-29
 
 " Colorscheme plugins
 " --------------------------------
 
-Bundle 'tpope/vim-vividchalk'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()
+
+syntax enable
+filetype plugin indent on
 
 let g:solarized_termcolors=256
 set background=dark
