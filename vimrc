@@ -43,6 +43,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'ervandew/supertab' 
 
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
+
 
 Plugin 'kien/ctrlp.vim' 
 " <c-p>
