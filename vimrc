@@ -32,6 +32,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+
+:autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
+
 Plugin 'gmarik/Vundle.vim'
 
 " Other plugins
@@ -42,6 +45,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'ervandew/supertab' 
+Plugin 'ivalkeen/vim-postgres'
 
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
@@ -49,6 +53,7 @@ Plugin 'tpope/vim-classpath'
 
 
 Plugin 'kien/ctrlp.vim' 
+let g:ctrlp_working_path_mode = ''
 " <c-p>
 
 Plugin 'tpope/vim-commentary' 
