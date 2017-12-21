@@ -23,48 +23,43 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 inoremap jk <esc>
 
-" Vundle (plugin manager) set up
-" --------------------------------
-" 1. $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-" 2. :PluginInstall
+" vim-plug is probably the best among many options
+" https://vi.stackexchange.com/questions/388/what-is-the-difference-between-the-vim-plugin-managers
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'gmarik/Vundle.vim'
 
 " Other plugins
 " --------------------------------
 
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'ervandew/supertab' 
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'ervandew/supertab' 
 
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-classpath'
 
-
-Plugin 'kien/ctrlp.vim' 
+Plug 'kien/ctrlp.vim' 
 " <c-p>
 
-Plugin 'tpope/vim-commentary' 
+Plug 'tpope/vim-commentary' 
 " gc<MOTION> 
 
-Plugin 'tpope/vim-speeddating' 
+Plug 'tpope/vim-speeddating' 
 " <c-A> and <c-X> : 1997-08-29
 
 " Colorscheme plugins
 " --------------------------------
 
-Plugin 'tpope/vim-vividchalk'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-vividchalk'
+Plug 'nanotech/jellybeans.vim'
+Plug 'altercation/vim-colors-solarized'
 
-call vundle#end()
+call plug#end()
 
 syntax enable
 filetype plugin indent on
