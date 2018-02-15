@@ -10,6 +10,7 @@ set expandtab
 set smarttab
 set hlsearch
 set number
+set cc=80
 
 " Custom mappings
 " --------------------------------
@@ -40,7 +41,8 @@ Plugin 'gmarik/Vundle.vim'
 " Other plugins
 " --------------------------------
 
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
@@ -51,15 +53,13 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 
-
 Plugin 'kien/ctrlp.vim' 
-let g:ctrlp_working_path_mode = ''
-" <c-p>
 
 Plugin 'tpope/vim-commentary' 
 " gc<MOTION> 
 
 Plugin 'tpope/vim-speeddating' 
+Plugin 'posva/vim-vue'
 " <c-A> and <c-X> : 1997-08-29
 
 " Colorscheme plugins
@@ -68,12 +68,11 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'altercation/vim-colors-solarized'
-
 call vundle#end()
 
 syntax enable
 filetype plugin indent on
 
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 set background=dark
 colorscheme jellybeans
