@@ -24,55 +24,53 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 inoremap jk <esc>
 
-" Vundle (plugin manager) set up
-" --------------------------------
-" 1. $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-" 2. :PluginInstall
+:autocmd FileType python nnoremap <C-b> :exec '!python' shellescape(@%, 1)<cr>
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim-plug is probably the best among many options
+" https://vi.stackexchange.com/questions/388/what-is-the-difference-between-the-vim-plugin-managers
 
+call plug#begin()
 
-:autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<cr>
+" General plugins
+" Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-endwise'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'ervandew/supertab' 
+Plug 'tpope/vim-commentary' " gc<MOTION> 
+Plug 'tpope/vim-speeddating' " <c-A> and <c-X> : 1995-08-28
+Plug 'kien/ctrlp.vim' " <c-p>
+Plug 'tpope/vim-fugitive'
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'posva/vim-vue'
 
-" Other plugins
-" --------------------------------
+" " Python
+" Plug 'vim-scripts/python.vim'
+" " Plug 'tmhedberg/SimpylFold'
+" let g:SimpylFold_docstring_preview = 1
 
-" Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'ervandew/supertab' 
-Plugin 'ivalkeen/vim-postgres'
+" NerdTree
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+map <C-n> :NERDTreeToggle<CR>
 
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
+" Clojure 
+" Plug 'tpope/vim-classpath'
+" Plug 'guns/vim-clojure-static'
+" Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-salve'
+" Plug 'tpope/vim-fireplace'
 
-Plugin 'kien/ctrlp.vim' 
+" Colorschemes
+Plug 'tpope/vim-vividchalk'
+Plug 'nanotech/jellybeans.vim'
+Plug 'altercation/vim-colors-solarized'
 
-Plugin 'tpope/vim-commentary' 
-" gc<MOTION> 
-
-Plugin 'tpope/vim-speeddating' 
-Plugin 'posva/vim-vue'
-" <c-A> and <c-X> : 1997-08-29
-
-" Colorscheme plugins
-" --------------------------------
-
-Plugin 'tpope/vim-vividchalk'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'altercation/vim-colors-solarized'
-call vundle#end()
+call plug#end()
 
 syntax enable
 filetype plugin indent on
 
-" let g:solarized_termcolors=256
+
+let g:solarized_termcolors=256
 set background=dark
 colorscheme jellybeans
