@@ -10,6 +10,9 @@ set expandtab
 set smarttab
 set hlsearch
 set number
+set cc=80
+" set foldmethod=indent
+" set foldlevel=0
 
 " Custom mappings
 " --------------------------------
@@ -28,33 +31,34 @@ inoremap jk <esc>
 
 call plug#begin()
 
-Plug 'gmarik/Vundle.vim'
-
-" Other plugins
-" --------------------------------
-
-Plug 'scrooloose/syntastic'
+" General plugins
+" Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'ervandew/supertab' 
+Plug 'tpope/vim-commentary' " gc<MOTION> 
+Plug 'tpope/vim-speeddating' " <c-A> and <c-X> : 1995-08-28
+Plug 'kien/ctrlp.vim' " <c-p>
+Plug 'tpope/vim-fugitive'
 
-Plug 'guns/vim-clojure-static'
-Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-classpath'
+" " Python
+" Plug 'vim-scripts/python.vim'
+" " Plug 'tmhedberg/SimpylFold'
+" let g:SimpylFold_docstring_preview = 1
 
-Plug 'kien/ctrlp.vim' 
-" <c-p>
+" NerdTree
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+map <C-n> :NERDTreeToggle<CR>
 
-Plug 'tpope/vim-commentary' 
-" gc<MOTION> 
+" Clojure 
+" Plug 'tpope/vim-classpath'
+" Plug 'guns/vim-clojure-static'
+" Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-salve'
+" Plug 'tpope/vim-fireplace'
 
-Plug 'tpope/vim-speeddating' 
-" <c-A> and <c-X> : 1997-08-29
-
-" Colorscheme plugins
-" --------------------------------
-
+" Colorschemes
 Plug 'tpope/vim-vividchalk'
 Plug 'nanotech/jellybeans.vim'
 Plug 'altercation/vim-colors-solarized'
@@ -63,6 +67,8 @@ call plug#end()
 
 syntax enable
 filetype plugin indent on
+
+nnoremap <C-b> :exec '!python' shellescape(@%, 1)<cr>
 
 let g:solarized_termcolors=256
 set background=dark
